@@ -32,10 +32,10 @@ runs:
 
     - name: Install java
       if: steps.check_java.outputs.installed == 'false'
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
-        distribution: "zulu"
-        java-version: "17.x"
+        distribution: 'zulu' # See 'Supported distributions' for available options
+        java-version: '21'
         cache: "gradle"
 
     - name: Check flutter found
